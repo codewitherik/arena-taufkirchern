@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketkauf - 1. Internationales Eishockey Turnier 2025</title>
+    <link rel="stylesheet" href="kauf.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="arena-logo.png" alt="Arena Taufkirchen">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./startseite.html">Startseite</a></li>
+                <li><a href="./veranstaltungen.html">Veranstaltungen</a></li>
+                <li><a href="./about.html">Über Uns</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="ticket-purchase">
+            <h2>Ticketkauf für das 1. Internationale Eishockey Turnier 2025</h2>
+            <p>Wählen Sie Ihre Tickets und schließen Sie den Kauf ab. Bitte geben Sie Ihre Informationen und Zahlungsdetails ein.</p>
+
+            <form id="ticket-form">
+                <!-- Ticket Auswahl -->
+                <div class="form-group">
+                    <label for="ticket-type">Ticket Typ:</label>
+                    <select id="ticket-type" name="ticket-type">
+                        <option value="standard">Standard Ticket (Kostenlos)</option>
+                        <option value="lounge">Lounge Ticket (100$)</option>
+                        <option value="vip">VIP Ticket (400$)</option>
+                        <option value="spieler">Spieler Ticket (Kostenlos)</option>
+                    </select>
+                </div>
+
+                <!-- Anzahl der Tickets -->
+                <div class="form-group">
+                    <label for="ticket-quantity">Anzahl Tickets:</label>
+                    <input type="number" id="ticket-quantity" name="ticket-quantity" min="1" value="1" required>
+                </div>
+
+                <!-- Käufer Information -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Ihr Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail-Adresse:</label>
+                    <input type="email" id="email" name="email" required placeholder="Ihre E-Mail">
+                </div>
+
+                <!-- Zahlungsmethoden -->
+                <div class="form-group">
+                    <label for="payment-method">Zahlungsmethode:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="credit-card">Kreditkarte</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank-transfer">Banküberweisung</option>
+                    </select>
+                </div>
+
+                <!-- Zahlungsdetails -->
+                <div class="form-group" id="payment-details">
+                    <label for="card-info">Kreditkartennummer:</label>
+                    <input type="text" id="card-info" name="card-info" placeholder="Kreditkartennummer" required>
+                </div>
+
+                <!-- Bestätigung -->
+                <div class="form-group">
+                    <button type="submit">Ticket kaufen</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Taufkirchener Young Rats | Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="kauf.js"></script>
+</body>
+</html>

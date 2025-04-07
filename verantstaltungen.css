@@ -1,0 +1,121 @@
+/* Grundlegendes Layout und Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Events Section */
+#events {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#events h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Event Cards */
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.event-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.event-info p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.event-info .btn-primary {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.event-info .btn-primary:hover {
+    background-color: #0d1a26;
+}
+
+/* Hover-Effekt für Event Cards */
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsivität */
+@media (max-width: 768px) {
+    .event-list {
+        grid-template-columns: 1fr;
+    }
+}
